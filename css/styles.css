@@ -563,6 +563,6 @@ img {
     background-color: #31d0aa;
 }
 
-.social-list-footer .team-social-link:focus .social-link-list {
+.social-list-footer .team-social-link .social-link-list:focus {
     background-color: #31d0aa;
 }
