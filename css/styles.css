@@ -332,9 +332,8 @@ img {
 .team-card {
     background: #fff;
     border-radius: 0 0 4px 4px;
-    padding: 0px 0px 32px 0px;
+    padding: 0px 0px 0px 0px;
     width: 264px;
-    height: 380px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
@@ -358,7 +357,7 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-bottom: 8px;
+
 }
 
 .card-content {
@@ -368,7 +367,7 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
-    margin-bottom: 8px;
+
 }
 
 .social-list {
@@ -445,6 +444,42 @@ img {
 .list-portfolio {
     background: #fff;
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-portfolio:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.list-portfolio:hover .cover-portfolio-text {
+    transform: translate(0);
+
+}
+
+.ingredients-cover-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-portfolio-text {
+    position: absolute;
+    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    height: 100%;
+    left: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .list-text-card {
@@ -470,6 +505,7 @@ img {
 }
 
 .container-footer {
+    display: flex;
     width: 1158px;
     height: 112px;
     padding: 0 15px;
@@ -498,4 +534,32 @@ img {
     flex-direction: row;
     gap: 0px;
     margin-bottom: 16px;
+}
+
+.footer-logo-text {
+    margin-right: 120px;
+}
+
+.text-media {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.social-list-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    ;
+}
+
+.social-list-footer .team-social-link:hover .social-link-list {
+    background-color: #31D0AA;
 }
